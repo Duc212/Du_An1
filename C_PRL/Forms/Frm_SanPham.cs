@@ -35,7 +35,7 @@ namespace C_PRL.Forms
         }
         public void LoadDataToGridView()
         {
-
+            
         }
     }
 }

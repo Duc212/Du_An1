@@ -36,8 +36,11 @@
             btn_HoaDon = new Button();
             btn_BanHang = new Button();
             panel1 = new Panel();
+            label1 = new Label();
+            lb_account = new Label();
             pn_Show = new Panel();
             pn_Menu.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // pn_Menu
@@ -95,6 +98,7 @@
             btn_NhanVien.Text = "Nhân Viên";
             btn_NhanVien.TextAlign = ContentAlignment.MiddleLeft;
             btn_NhanVien.UseVisualStyleBackColor = true;
+            btn_NhanVien.Click += btn_NhanVien_Click;
             // 
             // btn_SanPham
             // 
@@ -142,6 +146,8 @@
             // panel1
             // 
             panel1.BackColor = Color.DarkOliveGreen;
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(lb_account);
             panel1.Dock = DockStyle.Top;
             panel1.ForeColor = SystemColors.ButtonHighlight;
             panel1.Location = new Point(0, 0);
@@ -149,18 +155,38 @@
             panel1.Size = new Size(300, 150);
             panel1.TabIndex = 0;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(12, 22);
+            label1.Name = "label1";
+            label1.Size = new Size(115, 32);
+            label1.TabIndex = 1;
+            label1.Text = "Xin Chào,";
+            // 
+            // lb_account
+            // 
+            lb_account.AutoSize = true;
+            lb_account.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lb_account.Location = new Point(123, 22);
+            lb_account.Name = "lb_account";
+            lb_account.Size = new Size(29, 32);
+            lb_account.TabIndex = 0;
+            lb_account.Text = "...";
+            // 
             // pn_Show
             // 
             pn_Show.Location = new Point(303, 12);
             pn_Show.Name = "pn_Show";
-            pn_Show.Size = new Size(1125, 719);
+            pn_Show.Size = new Size(1165, 719);
             pn_Show.TabIndex = 1;
             // 
             // Frm_Main
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1455, 755);
+            ClientSize = new Size(1480, 755);
             Controls.Add(pn_Show);
             Controls.Add(pn_Menu);
             Name = "Frm_Main";
@@ -168,6 +194,8 @@
             Text = "Frm_Main";
             Load += Frm_Main_Load;
             pn_Menu.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -182,5 +210,7 @@
         private Button btn_BanHang;
         private Button button6;
         private Panel pn_Show;
+        private Label lb_account;
+        private Label label1;
     }
 }
