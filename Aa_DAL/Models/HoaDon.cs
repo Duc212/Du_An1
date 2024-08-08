@@ -20,6 +20,7 @@ namespace Aa_DAL.Models
         public string VoucherId { get; set; }   
 
         public virtual Nhanvien Nhanvien { get; set; }
+        public virtual KhachHang KhachHang { get; set; }
         public virtual Voucher Voucher { get; set; }
         public virtual List<HDCT> HDCTs { get; set; }
         public virtual List<LichSuThanhToan> LichSuThanhToans { get; set; }
