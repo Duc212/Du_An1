@@ -88,7 +88,7 @@ namespace B_BUS.Services
             catch (Exception ex)
             {
 
-                return "Khóa Thất Bại" + ex.Message + ex.InnerException;
+                return "Khóa Thất Bại" + ex.Message ;
             }
            
         }
@@ -109,7 +109,7 @@ namespace B_BUS.Services
             catch (Exception ex)
             {
 
-                return "Mở Khóa Thất Bại" + ex.Message + ex.InnerException;
+                return "Mở Khóa Thất Bại" + ex.Message ;
             }
 
         }
@@ -133,7 +133,7 @@ namespace B_BUS.Services
                 catch (Exception ex)
                 {
 
-                    return "Sửa Thất Bại"+ ex.Message + ex.InnerException;
+                    return "Sửa Thất Bại"+ ex.Message ;
                 }
             }
         }
