@@ -141,3 +141,5 @@ C:\Users\Duc\OneDrive\Desktop\SD19317\Du_An1\C_PRL\obj\Debug\net8.0-windows\C_PR
 C:\Users\Duc\OneDrive\Desktop\SD19317\Du_An1\C_PRL\obj\Debug\net8.0-windows\C_PRL.csproj.Up2Date
 C:\Users\Duc\OneDrive\Desktop\SD19317\Du_An1\C_PRL\bin\Debug\net8.0-windows\Aa_DAL.dll
 C:\Users\Duc\OneDrive\Desktop\SD19317\Du_An1\C_PRL\bin\Debug\net8.0-windows\Aa_DAL.pdb
+C:\Users\Duc\OneDrive\Desktop\SD19317\Du_An1\C_PRL\obj\Debug\net8.0-windows\C_PRL.Forms.Frm_Sale.resources
+C:\Users\Duc\OneDrive\Desktop\SD19317\Du_An1\C_PRL\obj\Debug\net8.0-windows\C_PRL.Forms.cpn_banhang.resources

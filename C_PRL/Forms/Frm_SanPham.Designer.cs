@@ -29,13 +29,11 @@
         private void InitializeComponent()
         {
             dtg_Data = new DataGridView();
-            pictureBox1 = new PictureBox();
-            label1 = new Label();
+            ptb_Image = new PictureBox();
             label2 = new Label();
             label3 = new Label();
             groupBox1 = new GroupBox();
-            button6 = new Button();
-            btn_Close = new Button();
+            btn_tim = new Button();
             btn_Show = new Button();
             btn_Xoa = new Button();
             btn_Sua = new Button();
@@ -43,72 +41,74 @@
             label4 = new Label();
             txt_timkiem = new TextBox();
             label5 = new Label();
-            label6 = new Label();
             label7 = new Label();
             label8 = new Label();
             groupBox2 = new GroupBox();
-            txt_masp = new TextBox();
             txt_tensp = new TextBox();
-            txt_loaisp = new TextBox();
-            txt_trangthai = new TextBox();
             txt_giaSP = new TextBox();
             txt_ncc = new TextBox();
             txt_soluongton = new TextBox();
+            label1 = new Label();
+            txt_mota = new TextBox();
+            cbx_trangthai = new ComboBox();
+            label6 = new Label();
+            cbx_sale = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dtg_Data).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_Image).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
             // 
             // dtg_Data
             // 
+            dtg_Data.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            dtg_Data.BackgroundColor = SystemColors.ActiveCaption;
             dtg_Data.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtg_Data.Location = new Point(6, 82);
+            dtg_Data.Location = new Point(6, 95);
             dtg_Data.Name = "dtg_Data";
             dtg_Data.RowHeadersWidth = 62;
-            dtg_Data.Size = new Size(1210, 237);
+            dtg_Data.Size = new Size(1333, 255);
             dtg_Data.TabIndex = 0;
+            dtg_Data.CellContentClick += dtg_Data_CellContentClick;
             // 
-            // pictureBox1
+            // ptb_Image
             // 
-            pictureBox1.Location = new Point(20, 30);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(280, 174);
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(37, 38);
-            label1.Name = "label1";
-            label1.Size = new Size(121, 25);
-            label1.TabIndex = 2;
-            label1.Text = "Mã Sản Phẩm";
-            label1.Click += label1_Click;
+            ptb_Image.Location = new Point(20, 30);
+            ptb_Image.Name = "ptb_Image";
+            ptb_Image.Size = new Size(272, 213);
+            ptb_Image.SizeMode = PictureBoxSizeMode.StretchImage;
+            ptb_Image.TabIndex = 1;
+            ptb_Image.TabStop = false;
+            ptb_Image.Click += ptb_Image_Click;
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Top;
             label2.AutoSize = true;
-            label2.Location = new Point(449, 81);
+            label2.Font = new Font("Segoe UI", 12F);
+            label2.ForeColor = SystemColors.Desktop;
+            label2.Location = new Point(532, 153);
             label2.Name = "label2";
-            label2.Size = new Size(89, 25);
+            label2.Size = new Size(163, 32);
             label2.TabIndex = 3;
-            label2.Text = "Số Lượng";
+            label2.Text = "Số Lượng Tồn";
+            label2.Click += label2_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(448, 129);
+            label3.Font = new Font("Segoe UI", 12F);
+            label3.ForeColor = SystemColors.Desktop;
+            label3.Location = new Point(69, 233);
             label3.Name = "label3";
-            label3.Size = new Size(77, 25);
+            label3.Size = new Size(102, 32);
             label3.TabIndex = 4;
             label3.Text = "Mã NCC";
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(button6);
-            groupBox1.Controls.Add(btn_Close);
+            groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            groupBox1.Controls.Add(btn_tim);
             groupBox1.Controls.Add(btn_Show);
             groupBox1.Controls.Add(btn_Xoa);
             groupBox1.Controls.Add(btn_Sua);
@@ -116,63 +116,69 @@
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(txt_timkiem);
             groupBox1.Controls.Add(dtg_Data);
-            groupBox1.Location = new Point(-1, 261);
+            groupBox1.Font = new Font("Segoe UI", 12F);
+            groupBox1.ForeColor = SystemColors.Desktop;
+            groupBox1.Location = new Point(12, 371);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(1213, 403);
+            groupBox1.Size = new Size(1349, 434);
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Bảng Chi Tiết Sản Phẩm";
+            groupBox1.Text = " Sản Phẩm";
             // 
-            // button6
+            // btn_tim
             // 
-            button6.Location = new Point(369, 25);
-            button6.Name = "button6";
-            button6.Size = new Size(112, 34);
-            button6.TabIndex = 8;
-            button6.Text = "Tìm";
-            button6.UseVisualStyleBackColor = true;
-            // 
-            // btn_Close
-            // 
-            btn_Close.Location = new Point(710, 349);
-            btn_Close.Name = "btn_Close";
-            btn_Close.Size = new Size(112, 34);
-            btn_Close.TabIndex = 7;
-            btn_Close.Text = "Đóng";
-            btn_Close.UseVisualStyleBackColor = true;
+            btn_tim.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btn_tim.ForeColor = SystemColors.ActiveCaptionText;
+            btn_tim.Location = new Point(1207, 40);
+            btn_tim.Name = "btn_tim";
+            btn_tim.Size = new Size(132, 48);
+            btn_tim.TabIndex = 8;
+            btn_tim.Text = "Tìm";
+            btn_tim.UseVisualStyleBackColor = true;
+            btn_tim.Click += btn_tim_Click;
             // 
             // btn_Show
             // 
-            btn_Show.Location = new Point(538, 349);
+            btn_Show.Anchor = AnchorStyles.Top;
+            btn_Show.ForeColor = SystemColors.ActiveCaptionText;
+            btn_Show.Location = new Point(899, 368);
             btn_Show.Name = "btn_Show";
-            btn_Show.Size = new Size(112, 34);
+            btn_Show.Size = new Size(150, 57);
             btn_Show.TabIndex = 6;
             btn_Show.Text = "Hiển Thị DS";
             btn_Show.UseVisualStyleBackColor = true;
             // 
             // btn_Xoa
             // 
-            btn_Xoa.Location = new Point(369, 349);
+            btn_Xoa.Anchor = AnchorStyles.Top;
+            btn_Xoa.ForeColor = SystemColors.ActiveCaptionText;
+            btn_Xoa.Location = new Point(677, 368);
             btn_Xoa.Name = "btn_Xoa";
-            btn_Xoa.Size = new Size(112, 34);
+            btn_Xoa.Size = new Size(145, 57);
             btn_Xoa.TabIndex = 5;
             btn_Xoa.Text = "Xóa";
             btn_Xoa.UseVisualStyleBackColor = true;
+            btn_Xoa.Click += btn_Xoa_Click;
             // 
             // btn_Sua
             // 
-            btn_Sua.Location = new Point(204, 349);
+            btn_Sua.Anchor = AnchorStyles.Top;
+            btn_Sua.ForeColor = SystemColors.ActiveCaptionText;
+            btn_Sua.Location = new Point(466, 368);
             btn_Sua.Name = "btn_Sua";
-            btn_Sua.Size = new Size(112, 34);
+            btn_Sua.Size = new Size(145, 57);
             btn_Sua.TabIndex = 4;
             btn_Sua.Text = "Sửa";
             btn_Sua.UseVisualStyleBackColor = true;
+            btn_Sua.Click += btn_Sua_Click;
             // 
             // btn_Them
             // 
-            btn_Them.Location = new Point(38, 349);
+            btn_Them.Anchor = AnchorStyles.Top;
+            btn_Them.ForeColor = SystemColors.ActiveCaptionText;
+            btn_Them.Location = new Point(254, 368);
             btn_Them.Name = "btn_Them";
-            btn_Them.Size = new Size(112, 34);
+            btn_Them.Size = new Size(145, 57);
             btn_Them.TabIndex = 3;
             btn_Them.Text = "Thêm";
             btn_Them.UseVisualStyleBackColor = true;
@@ -180,141 +186,182 @@
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label4.AutoSize = true;
-            label4.Location = new Point(43, 27);
+            label4.Location = new Point(861, 48);
             label4.Name = "label4";
-            label4.Size = new Size(85, 25);
+            label4.Size = new Size(115, 32);
             label4.TabIndex = 2;
             label4.Text = "Tìm Kiếm";
             // 
             // txt_timkiem
             // 
-            txt_timkiem.Location = new Point(148, 27);
+            txt_timkiem.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            txt_timkiem.Location = new Point(1002, 45);
             txt_timkiem.Name = "txt_timkiem";
-            txt_timkiem.Size = new Size(188, 31);
+            txt_timkiem.Size = new Size(188, 39);
             txt_timkiem.TabIndex = 1;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(36, 78);
+            label5.Font = new Font("Segoe UI", 12F);
+            label5.ForeColor = SystemColors.Desktop;
+            label5.Location = new Point(69, 73);
             label5.Name = "label5";
-            label5.Size = new Size(122, 25);
+            label5.Size = new Size(165, 32);
             label5.TabIndex = 6;
             label5.Text = "Tên Sản Phẩm";
             // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(37, 123);
-            label6.Name = "label6";
-            label6.Size = new Size(128, 25);
-            label6.TabIndex = 7;
-            label6.Text = "Loại Sản Phẩm";
-            // 
             // label7
             // 
+            label7.Anchor = AnchorStyles.Top;
             label7.AutoSize = true;
-            label7.Location = new Point(36, 171);
+            label7.Font = new Font("Segoe UI", 12F);
+            label7.ForeColor = SystemColors.Desktop;
+            label7.Location = new Point(532, 233);
             label7.Name = "label7";
-            label7.Size = new Size(92, 25);
+            label7.Size = new Size(125, 32);
             label7.TabIndex = 8;
             label7.Text = "Trạng Thái";
             // 
             // label8
             // 
+            label8.Anchor = AnchorStyles.Top;
             label8.AutoSize = true;
-            label8.Location = new Point(449, 32);
+            label8.Font = new Font("Segoe UI", 12F);
+            label8.ForeColor = SystemColors.Desktop;
+            label8.Location = new Point(532, 73);
             label8.Name = "label8";
-            label8.Size = new Size(76, 25);
+            label8.Size = new Size(100, 32);
             label8.TabIndex = 9;
             label8.Text = "Đơn Giá";
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(pictureBox1);
-            groupBox2.Location = new Point(819, 38);
+            groupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            groupBox2.Controls.Add(ptb_Image);
+            groupBox2.Font = new Font("Segoe UI", 12F);
+            groupBox2.ForeColor = SystemColors.Desktop;
+            groupBox2.Location = new Point(1004, 36);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(315, 217);
+            groupBox2.Size = new Size(330, 261);
             groupBox2.TabIndex = 10;
             groupBox2.TabStop = false;
             groupBox2.Text = "Ảnh Sản Phẩm";
             // 
-            // txt_masp
-            // 
-            txt_masp.Location = new Point(185, 32);
-            txt_masp.Name = "txt_masp";
-            txt_masp.Size = new Size(196, 31);
-            txt_masp.TabIndex = 11;
-            // 
             // txt_tensp
             // 
-            txt_tensp.Location = new Point(185, 75);
+            txt_tensp.Font = new Font("Segoe UI", 12F);
+            txt_tensp.Location = new Point(275, 66);
             txt_tensp.Name = "txt_tensp";
-            txt_tensp.Size = new Size(196, 31);
+            txt_tensp.Size = new Size(222, 39);
             txt_tensp.TabIndex = 12;
-            // 
-            // txt_loaisp
-            // 
-            txt_loaisp.Location = new Point(185, 123);
-            txt_loaisp.Name = "txt_loaisp";
-            txt_loaisp.Size = new Size(196, 31);
-            txt_loaisp.TabIndex = 13;
-            // 
-            // txt_trangthai
-            // 
-            txt_trangthai.Location = new Point(185, 165);
-            txt_trangthai.Name = "txt_trangthai";
-            txt_trangthai.Size = new Size(196, 31);
-            txt_trangthai.TabIndex = 14;
             // 
             // txt_giaSP
             // 
-            txt_giaSP.Location = new Point(562, 26);
+            txt_giaSP.Anchor = AnchorStyles.Top;
+            txt_giaSP.Font = new Font("Segoe UI", 12F);
+            txt_giaSP.Location = new Point(710, 66);
             txt_giaSP.Name = "txt_giaSP";
-            txt_giaSP.Size = new Size(214, 31);
+            txt_giaSP.Size = new Size(258, 39);
             txt_giaSP.TabIndex = 15;
             // 
             // txt_ncc
             // 
-            txt_ncc.Location = new Point(562, 126);
+            txt_ncc.Font = new Font("Segoe UI", 12F);
+            txt_ncc.Location = new Point(275, 226);
             txt_ncc.Name = "txt_ncc";
-            txt_ncc.Size = new Size(214, 31);
+            txt_ncc.Size = new Size(222, 39);
             txt_ncc.TabIndex = 17;
             // 
             // txt_soluongton
             // 
-            txt_soluongton.Location = new Point(562, 81);
+            txt_soluongton.Anchor = AnchorStyles.Top;
+            txt_soluongton.Font = new Font("Segoe UI", 12F);
+            txt_soluongton.Location = new Point(710, 146);
             txt_soluongton.Name = "txt_soluongton";
-            txt_soluongton.Size = new Size(214, 31);
+            txt_soluongton.Size = new Size(258, 39);
             txt_soluongton.TabIndex = 18;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F);
+            label1.ForeColor = SystemColors.Desktop;
+            label1.Location = new Point(69, 153);
+            label1.Name = "label1";
+            label1.Size = new Size(195, 32);
+            label1.TabIndex = 19;
+            label1.Text = "Mô Tả Sản Phẩm";
+            // 
+            // txt_mota
+            // 
+            txt_mota.Font = new Font("Segoe UI", 12F);
+            txt_mota.Location = new Point(275, 146);
+            txt_mota.Name = "txt_mota";
+            txt_mota.Size = new Size(222, 39);
+            txt_mota.TabIndex = 20;
+            // 
+            // cbx_trangthai
+            // 
+            cbx_trangthai.Anchor = AnchorStyles.Top;
+            cbx_trangthai.Font = new Font("Segoe UI", 12F);
+            cbx_trangthai.FormattingEnabled = true;
+            cbx_trangthai.Items.AddRange(new object[] { "Hoạt Động", "Ngừng Kinh Doanh" });
+            cbx_trangthai.Location = new Point(710, 225);
+            cbx_trangthai.Name = "cbx_trangthai";
+            cbx_trangthai.Size = new Size(260, 40);
+            cbx_trangthai.TabIndex = 21;
+            cbx_trangthai.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F);
+            label6.ForeColor = SystemColors.Desktop;
+            label6.Location = new Point(532, 310);
+            label6.Name = "label6";
+            label6.Size = new Size(58, 32);
+            label6.TabIndex = 4;
+            label6.Text = "Sale";
+            // 
+            // cbx_sale
+            // 
+            cbx_sale.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cbx_sale.FormattingEnabled = true;
+            cbx_sale.Location = new Point(710, 307);
+            cbx_sale.Name = "cbx_sale";
+            cbx_sale.Size = new Size(260, 40);
+            cbx_sale.TabIndex = 22;
             // 
             // Frm_SanPham
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1209, 663);
+            BackColor = Color.White;
+            ClientSize = new Size(1373, 807);
+            Controls.Add(cbx_sale);
+            Controls.Add(cbx_trangthai);
+            Controls.Add(txt_mota);
+            Controls.Add(label1);
             Controls.Add(txt_soluongton);
             Controls.Add(txt_ncc);
             Controls.Add(txt_giaSP);
-            Controls.Add(txt_trangthai);
-            Controls.Add(txt_loaisp);
             Controls.Add(txt_tensp);
-            Controls.Add(txt_masp);
             Controls.Add(groupBox2);
             Controls.Add(label8);
             Controls.Add(label7);
-            Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(groupBox1);
+            Controls.Add(label6);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(label1);
             Name = "Frm_SanPham";
-            Text = "Frm_SanPham";
+            Text = "Sản Phẩm";
             Load += Frm_SanPham_Load;
             ((System.ComponentModel.ISupportInitialize)dtg_Data).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_Image).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -325,30 +372,29 @@
         #endregion
 
         private DataGridView dtg_Data;
-        private PictureBox pictureBox1;
-        private Label label1;
+        private PictureBox ptb_Image;
         private Label label2;
         private Label label3;
         private GroupBox groupBox1;
         private Label label4;
         private TextBox txt_timkiem;
         private Label label5;
-        private Label label6;
         private Label label7;
         private Label label8;
         private GroupBox groupBox2;
-        private TextBox txt_masp;
         private TextBox txt_tensp;
-        private TextBox txt_loaisp;
-        private TextBox txt_trangthai;
         private TextBox txt_giaSP;
         private TextBox txt_ncc;
-        private Button button6;
-        private Button btn_Close;
+        private Button btn_tim;
         private Button btn_Show;
         private Button btn_Xoa;
         private Button btn_Sua;
         private Button btn_Them;
         private TextBox txt_soluongton;
+        private Label label1;
+        private TextBox txt_mota;
+        private ComboBox cbx_trangthai;
+        private Label label6;
+        private ComboBox cbx_sale;
     }
 }

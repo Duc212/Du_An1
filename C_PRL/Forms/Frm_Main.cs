@@ -40,6 +40,8 @@ namespace C_PRL.Forms
             frm_BanHang.TopLevel = false;
             pn_Show.Controls.Add(frm_BanHang);
             frm_BanHang.FormBorderStyle = FormBorderStyle.None;
+            lb_title.Text = frm_BanHang.Text;
+            frm_BanHang.Dock = DockStyle.Fill;
             frm_BanHang.Show();
         }
 
@@ -50,6 +52,9 @@ namespace C_PRL.Forms
             frm_SanPham.TopLevel = false;
             pn_Show.Controls.Add(frm_SanPham);
             frm_SanPham.FormBorderStyle = FormBorderStyle.None;
+            frm_SanPham.BringToFront();
+            lb_title.Text = frm_SanPham.Text;
+            frm_SanPham.Dock = DockStyle.Fill;
             frm_SanPham.Show();
         }
 
@@ -60,6 +65,9 @@ namespace C_PRL.Forms
             frm_KhachHang.TopLevel = false;
             pn_Show.Controls.Add(frm_KhachHang);
             frm_KhachHang.FormBorderStyle = FormBorderStyle.None;
+            frm_KhachHang.Dock = DockStyle.Fill;
+            lb_title.Text = frm_KhachHang.Text;
+
             frm_KhachHang.Show();
         }
 
@@ -70,7 +78,43 @@ namespace C_PRL.Forms
             frm_NhanVien.TopLevel = false;
             pn_Show.Controls.Add(frm_NhanVien);
             frm_NhanVien.FormBorderStyle = FormBorderStyle.None;
+            frm_NhanVien.Dock = DockStyle.Fill;
+            lb_title.Text = frm_NhanVien.Text;
             frm_NhanVien.Show();
+        }
+
+        private void pn_Menu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_GiamGia_Click(object sender, EventArgs e)
+        {
+            pn_Show.Controls.Clear();
+            Frm_Sale frm_Sale = new Frm_Sale();
+            frm_Sale.TopLevel = false;
+            pn_Show.Controls.Add(frm_Sale);
+            frm_Sale.FormBorderStyle = FormBorderStyle.None;
+            frm_Sale.Dock = DockStyle.Fill;
+            lb_title.Text = frm_Sale.Text;
+            frm_Sale.Show();
+        }
+
+        private void btn_HoaDon_Click(object sender, EventArgs e)
+        {
+            pn_Show.Controls.Clear();
+            Frm_HoaDon frm_HoaDon = new Frm_HoaDon();
+            frm_HoaDon.TopLevel = false;
+            pn_Show.Controls.Add(frm_HoaDon);
+            frm_HoaDon.FormBorderStyle = FormBorderStyle.None;
+            frm_HoaDon.Dock = DockStyle.Fill;
+            lb_title.Text = frm_HoaDon.Text;
+            frm_HoaDon.Show();
         }
     }
 }

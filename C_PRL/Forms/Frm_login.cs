@@ -41,7 +41,12 @@ namespace C_PRL.Forms
             {
 
                 Frm_Main main = new Frm_Main(tkNhanvien);
+                //main.FormBorderStyle = FormBorderStyle.None;
+                this.Hide();
                 main.ShowDialog();
+                this.Show();
+                txt_taikhoan.Text = "";
+                txt_matkhau.Text = "";
             }
         }
 

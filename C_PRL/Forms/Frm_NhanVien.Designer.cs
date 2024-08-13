@@ -177,7 +177,7 @@
             Controls.Add(label1);
             Controls.Add(dtg_Data);
             Name = "Frm_NhanVien";
-            Text = "Frm_NhanVien";
+            Text = "Nhân Viên";
             Load += Frm_NhanVien_Load;
             ((System.ComponentModel.ISupportInitialize)dtg_Data).EndInit();
             ResumeLayout(false);

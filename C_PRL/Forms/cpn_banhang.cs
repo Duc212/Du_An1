@@ -1,5 +1,5 @@
 ﻿using Aa_DAL.Models;
-using B_BUS.Services;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,26 +12,13 @@ using System.Windows.Forms;
 
 namespace C_PRL.Forms
 {
-    public partial class Frm_BanHang : Form
+    public partial class cpn_banhang : Form
     {
-        SanPhamServices _sanphamservice;
-        public Frm_BanHang()
+        public cpn_banhang()
         {
-            _sanphamservice = new SanPhamServices();
             InitializeComponent();
         }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btn_BanHang_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        public Panel CreateSp(SanPham sp)
+        public Panel CreateSp(SanPham sp )
         {
             Button btn_Mua = new Button();
             TextBox txt_SLBan = new TextBox();
@@ -116,13 +103,12 @@ namespace C_PRL.Forms
             ptb_Img.TabIndex = 11;
             ptb_Img.TabStop = false;
             ptb_Img.ImageLocation = sp.ImgURL;
-            ptb_Img.SizeMode = PictureBoxSizeMode.StretchImage;
             // 
             // cpn_banhang
             // 
             Panel pn = new Panel();
             pn.Size = new Size(350, 300);
-            pn.Name = sp.Id.ToString();
+            pn.Name = sp.Id.ToString(); 
             pn.Controls.Add(btn_Mua);
             pn.Controls.Add(txt_SLBan);
             pn.Controls.Add(lb_SLValue);
@@ -133,33 +119,6 @@ namespace C_PRL.Forms
             pn.Controls.Add(ptb_Img);
 
             return pn;
-        }
-
-        public void LoadProductbyPage(int page) // Load SP theo trang
-        {
-
-        }
-        private void Frm_BanHang_Load(object sender, EventArgs e)
-        {
-            SanPham sp = new SanPham()
-            {
-                TenSanPham = "Soda", 
-                NhaCungCap="Pepsi",
-                ImgURL= "C:\\Users\\Duc\\OneDrive\\Desktop\\SD19317\\Du_An1\\C_PRL\\Resources\\Images\\pepsi.jpg",
-                Gia = 12000,
-                SoLuongTon = 300,
-                TrangThai = 0,
-                MoTa="Gas"
-
-            };
-            Panel panel = CreateSp(sp);
-            Panel panel1 = CreateSp(sp);
-            Panel panel2 = CreateSp(sp);
-            Panel panel3 = CreateSp(sp);
-            tlp_SanPham.Controls.Add(panel,0,0);
-            tlp_SanPham.Controls.Add(panel1,0,1);
-            tlp_SanPham.Controls.Add(panel2,1,0);
-            tlp_SanPham.Controls.Add(panel3,1,1);
         }
     }
 }
