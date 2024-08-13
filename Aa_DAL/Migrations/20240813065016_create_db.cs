@@ -51,6 +51,40 @@ namespace Aa_DAL.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Sales",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Percent = table.Column<double>(type: "float", nullable: false),
+                    StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    EndDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Status = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Sales", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Vouchers",
+                columns: table => new
+                {
+                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    TenVoucher = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Mota = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TienGiam = table.Column<long>(type: "bigint", nullable: false),
+                    NgayBatDau = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    NgayKetThuc = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    TrangThai = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Vouchers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "SanPhams",
                 columns: table => new
                 {
@@ -61,28 +95,17 @@ namespace Aa_DAL.Migrations
                     NhaCungCap = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Gia = table.Column<long>(type: "bigint", nullable: false),
                     SoLuongTon = table.Column<int>(type: "int", nullable: false),
-                    TrangThai = table.Column<int>(type: "int", nullable: false)
+                    TrangThai = table.Column<int>(type: "int", nullable: false),
+                    SaleId = table.Column<Guid>(type: "uniqueidentifier", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_SanPhams", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Vouchers",
-                columns: table => new
-                {
-                    Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    TenVoucher = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Mota = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PhanTramGiam = table.Column<long>(type: "bigint", nullable: false),
-                    NgayBatDau = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    NgayKetThuc = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    TrangThai = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Vouchers", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_SanPhams_Sales_SaleId",
+                        column: x => x.SaleId,
+                        principalTable: "Sales",
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -96,7 +119,7 @@ namespace Aa_DAL.Migrations
                     TrangThai = table.Column<int>(type: "int", nullable: false),
                     NgayTao = table.Column<DateTime>(type: "datetime2", nullable: false),
                     VoucherId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    KhachHangSoDienThoai = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                    KhachHangSoDienThoai = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -105,7 +128,8 @@ namespace Aa_DAL.Migrations
                         name: "FK_HoaDons_KhachHangs_KhachHangSoDienThoai",
                         column: x => x.KhachHangSoDienThoai,
                         principalTable: "KhachHangs",
-                        principalColumn: "SoDienThoai");
+                        principalColumn: "SoDienThoai",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_HoaDons_Nhanviens_NhanVienId",
                         column: x => x.NhanVienId,
@@ -208,6 +232,11 @@ namespace Aa_DAL.Migrations
                 name: "IX_LichSuThanhToans_HoaDonId",
                 table: "LichSuThanhToans",
                 column: "HoaDonId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_SanPhams_SaleId",
+                table: "SanPhams",
+                column: "SaleId");
         }
 
         /// <inheritdoc />
@@ -227,6 +256,9 @@ namespace Aa_DAL.Migrations
 
             migrationBuilder.DropTable(
                 name: "HoaDons");
+
+            migrationBuilder.DropTable(
+                name: "Sales");
 
             migrationBuilder.DropTable(
                 name: "KhachHangs");

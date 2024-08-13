@@ -18,7 +18,9 @@ namespace Aa_DAL.Models
         public long Gia {  get; set; }
         public int SoLuongTon { get; set; } 
         public int TrangThai {  get; set; } 
+        public Guid? SaleId { get; set; }    
         public virtual List<HDCT> HDCTs { get; set; }
         
+        public virtual Sale Sale { get; set; }
     }
 }

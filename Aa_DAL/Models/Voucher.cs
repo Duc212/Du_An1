@@ -13,7 +13,7 @@ namespace Aa_DAL.Models
         public string Id { get; set; }  
         public string TenVoucher {  get; set; }
         public string Mota { get; set; }    
-        public long PhanTramGiam { get; set; }  
+        public long TienGiam { get; set; }  
         public DateTime NgayBatDau { get; set; }    
         public DateTime NgayKetThuc {  get; set; }
         public int TrangThai { get; set; }  

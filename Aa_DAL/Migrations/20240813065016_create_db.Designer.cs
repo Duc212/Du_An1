@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Aa_DAL.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    [Migration("20240807195024_create_db")]
+    [Migration("20240813065016_create_db")]
     partial class create_db
     {
         /// <inheritdoc />
@@ -81,6 +81,7 @@ namespace Aa_DAL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("KhachHangSoDienThoai")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("NgayTao")
@@ -173,6 +174,37 @@ namespace Aa_DAL.Migrations
                     b.ToTable("Nhanviens");
                 });
 
+            modelBuilder.Entity("Aa_DAL.Models.Sale", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Percent")
+                        .HasColumnType("float");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Sales");
+                });
+
             modelBuilder.Entity("Aa_DAL.Models.SanPham", b =>
                 {
                     b.Property<Guid>("Id")
@@ -194,6 +226,9 @@ namespace Aa_DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid?>("SaleId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<int>("SoLuongTon")
                         .HasColumnType("int");
 
@@ -205,6 +240,8 @@ namespace Aa_DAL.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("SaleId");
 
                     b.ToTable("SanPhams");
                 });
@@ -224,12 +261,12 @@ namespace Aa_DAL.Migrations
                     b.Property<DateTime>("NgayKetThuc")
                         .HasColumnType("datetime2");
 
-                    b.Property<long>("PhanTramGiam")
-                        .HasColumnType("bigint");
-
                     b.Property<string>("TenVoucher")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("TienGiam")
+                        .HasColumnType("bigint");
 
                     b.Property<int>("TrangThai")
                         .HasColumnType("int");
@@ -260,9 +297,11 @@ namespace Aa_DAL.Migrations
 
             modelBuilder.Entity("Aa_DAL.Models.HoaDon", b =>
                 {
-                    b.HasOne("Aa_DAL.Models.KhachHang", null)
+                    b.HasOne("Aa_DAL.Models.KhachHang", "KhachHang")
                         .WithMany("HoaDons")
-                        .HasForeignKey("KhachHangSoDienThoai");
+                        .HasForeignKey("KhachHangSoDienThoai")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Aa_DAL.Models.Nhanvien", "Nhanvien")
                         .WithMany("HoaDons")
@@ -275,6 +314,8 @@ namespace Aa_DAL.Migrations
                         .HasForeignKey("VoucherId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("KhachHang");
 
                     b.Navigation("Nhanvien");
 
@@ -300,6 +341,15 @@ namespace Aa_DAL.Migrations
                     b.Navigation("HoaDon");
                 });
 
+            modelBuilder.Entity("Aa_DAL.Models.SanPham", b =>
+                {
+                    b.HasOne("Aa_DAL.Models.Sale", "Sale")
+                        .WithMany("SanPhams")
+                        .HasForeignKey("SaleId");
+
+                    b.Navigation("Sale");
+                });
+
             modelBuilder.Entity("Aa_DAL.Models.HinhThucThanhToan", b =>
                 {
                     b.Navigation("LichSuThanhToans");
@@ -320,6 +370,11 @@ namespace Aa_DAL.Migrations
             modelBuilder.Entity("Aa_DAL.Models.Nhanvien", b =>
                 {
                     b.Navigation("HoaDons");
+                });
+
+            modelBuilder.Entity("Aa_DAL.Models.Sale", b =>
+                {
+                    b.Navigation("SanPhams");
                 });
 
             modelBuilder.Entity("Aa_DAL.Models.SanPham", b =>

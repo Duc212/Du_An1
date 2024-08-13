@@ -26,6 +26,7 @@ namespace Aa_DAL.Models
         public DbSet<Voucher> Vouchers { get; set; }
         public DbSet<LichSuThanhToan> LichSuThanhToans { get; set; }
         public DbSet<HinhThucThanhToan> HinhThucThanhToans { get; set; }
+        public DbSet<Sale> Sales { get; set; }  
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
