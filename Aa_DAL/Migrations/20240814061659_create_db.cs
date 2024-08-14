@@ -118,8 +118,8 @@ namespace Aa_DAL.Migrations
                     TongTien = table.Column<long>(type: "bigint", nullable: false),
                     TrangThai = table.Column<int>(type: "int", nullable: false),
                     NgayTao = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    VoucherId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    KhachHangSoDienThoai = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    VoucherId = table.Column<string>(type: "nvarchar(450)", nullable: true),
+                    KhachHangSoDienThoai = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -128,8 +128,7 @@ namespace Aa_DAL.Migrations
                         name: "FK_HoaDons_KhachHangs_KhachHangSoDienThoai",
                         column: x => x.KhachHangSoDienThoai,
                         principalTable: "KhachHangs",
-                        principalColumn: "SoDienThoai",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "SoDienThoai");
                     table.ForeignKey(
                         name: "FK_HoaDons_Nhanviens_NhanVienId",
                         column: x => x.NhanVienId,
@@ -140,8 +139,7 @@ namespace Aa_DAL.Migrations
                         name: "FK_HoaDons_Vouchers_VoucherId",
                         column: x => x.VoucherId,
                         principalTable: "Vouchers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(

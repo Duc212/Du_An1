@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Aa_DAL.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    [Migration("20240813065016_create_db")]
+    [Migration("20240814061659_create_db")]
     partial class create_db
     {
         /// <inheritdoc />
@@ -81,7 +81,6 @@ namespace Aa_DAL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("KhachHangSoDienThoai")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("NgayTao")
@@ -98,7 +97,6 @@ namespace Aa_DAL.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("VoucherId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
@@ -299,9 +297,7 @@ namespace Aa_DAL.Migrations
                 {
                     b.HasOne("Aa_DAL.Models.KhachHang", "KhachHang")
                         .WithMany("HoaDons")
-                        .HasForeignKey("KhachHangSoDienThoai")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("KhachHangSoDienThoai");
 
                     b.HasOne("Aa_DAL.Models.Nhanvien", "Nhanvien")
                         .WithMany("HoaDons")
@@ -311,9 +307,7 @@ namespace Aa_DAL.Migrations
 
                     b.HasOne("Aa_DAL.Models.Voucher", "Voucher")
                         .WithMany("HoaDons")
-                        .HasForeignKey("VoucherId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("VoucherId");
 
                     b.Navigation("KhachHang");
 
