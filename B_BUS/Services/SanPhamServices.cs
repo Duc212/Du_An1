@@ -41,7 +41,7 @@ namespace B_BUS.Services
                 }
                 catch (Exception ex)
                 {
-                    return "Them That Bai" + ex.Message +ex.InnerException ;
+                    return "Them That Bai"  ;
                 }
             }
            

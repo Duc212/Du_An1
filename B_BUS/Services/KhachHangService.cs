@@ -18,26 +18,32 @@ namespace B_BUS.Services
         {
             return _context.KhachHangs.ToList();
         }
-        public string themKH(KhachHang khachhang)
+        public List<KhachHang> GetBySDT(string sodienthoai)
         {
-            try
-            {
+            
+            return _context.KhachHangs.Where(p => p.SoDienThoai.Contains(sodienthoai)).ToList();
+        }
+        public void themKH(string sodienthoai, string name, int point = 0  )
+        {
+            
+                KhachHang khachhang = new KhachHang()
+                {
+                    SoDienThoai = sodienthoai,
+                    TenKH = name,
+                    Diem  = point
+
+                };
                 _context.KhachHangs.Add(khachhang);
                 _context.SaveChanges();
-                return "Thêm khach hang thành công";
-            }
-            catch (Exception ex)
-            {
-
-                return " Them That bai" + ex.Message;
-            }
+            
+            
         }
-        public string suaKH(KhachHang khachhang)
+        public string suaKH(string sodienthoai, string name, int point)
         {
-            var suaKH = _context.KhachHangs.Find(khachhang.SoDienThoai);
-            suaKH.SoDienThoai = khachhang.SoDienThoai;
-            suaKH.TenKH = khachhang.TenKH;
-            suaKH.Diem=khachhang.Diem;
+            var suaKH = _context.KhachHangs.Find(sodienthoai);
+            suaKH.SoDienThoai = sodienthoai;
+            suaKH.TenKH = name;
+            suaKH.Diem=point;
 
             try
             {
@@ -48,7 +54,7 @@ namespace B_BUS.Services
             catch (Exception ex)
             {
 
-                return "Sửa thất bại"+ ex.Message;
+                return "Sửa thất bại";
             }
         } 
         public string xoaKH(string sodienthoai)
@@ -63,7 +69,7 @@ namespace B_BUS.Services
             catch (Exception ex)
             {
 
-                return "Xoa That Bai" + ex.Message;
+                return "Xoa That Bai" ;
             }
         }
     }
