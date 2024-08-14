@@ -4,7 +4,6 @@ C:\Users\Duc\OneDrive\Desktop\SD19317\Du_An1\C_PRL\bin\Debug\net8.0-windows\C_PR
 C:\Users\Duc\OneDrive\Desktop\SD19317\Du_An1\C_PRL\bin\Debug\net8.0-windows\C_PRL.dll
 C:\Users\Duc\OneDrive\Desktop\SD19317\Du_An1\C_PRL\bin\Debug\net8.0-windows\C_PRL.pdb
 C:\Users\Duc\OneDrive\Desktop\SD19317\Du_An1\C_PRL\obj\Debug\net8.0-windows\C_PRL.Forms.Frm_BanHang.resources
-C:\Users\Duc\OneDrive\Desktop\SD19317\Du_An1\C_PRL\obj\Debug\net8.0-windows\C_PRL.Forms.Frm_HoaDon.resources
 C:\Users\Duc\OneDrive\Desktop\SD19317\Du_An1\C_PRL\obj\Debug\net8.0-windows\C_PRL.Forms.Frm_KhachHang.resources
 C:\Users\Duc\OneDrive\Desktop\SD19317\Du_An1\C_PRL\obj\Debug\net8.0-windows\C_PRL.Forms.Frm_login.resources
 C:\Users\Duc\OneDrive\Desktop\SD19317\Du_An1\C_PRL\obj\Debug\net8.0-windows\C_PRL.Forms.Frm_Main.resources
@@ -143,3 +142,5 @@ C:\Users\Duc\OneDrive\Desktop\SD19317\Du_An1\C_PRL\bin\Debug\net8.0-windows\Aa_D
 C:\Users\Duc\OneDrive\Desktop\SD19317\Du_An1\C_PRL\bin\Debug\net8.0-windows\Aa_DAL.pdb
 C:\Users\Duc\OneDrive\Desktop\SD19317\Du_An1\C_PRL\obj\Debug\net8.0-windows\C_PRL.Forms.Frm_Sale.resources
 C:\Users\Duc\OneDrive\Desktop\SD19317\Du_An1\C_PRL\obj\Debug\net8.0-windows\C_PRL.Forms.cpn_banhang.resources
+C:\Users\Duc\OneDrive\Desktop\SD19317\Du_An1\C_PRL\obj\Debug\net8.0-windows\C_PRL.Forms.Frm_Voucher.resources
+C:\Users\Duc\OneDrive\Desktop\SD19317\Du_An1\C_PRL\obj\Debug\net8.0-windows\C_PRL.Forms.Frm_LichSuHoaDon.resources

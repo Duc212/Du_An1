@@ -36,13 +36,14 @@
             lb_Gia = new Label();
             lb_Ten = new Label();
             ptb_Img = new PictureBox();
+            lb_GiaMoi = new Label();
             ((System.ComponentModel.ISupportInitialize)ptb_Img).BeginInit();
             SuspendLayout();
             // 
             // btn_Mua
             // 
             btn_Mua.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_Mua.Location = new Point(207, 193);
+            btn_Mua.Location = new Point(205, 172);
             btn_Mua.Name = "btn_Mua";
             btn_Mua.Size = new Size(115, 42);
             btn_Mua.TabIndex = 18;
@@ -51,16 +52,16 @@
             // 
             // txt_SLBan
             // 
-            txt_SLBan.Location = new Point(8, 199);
+            txt_SLBan.Location = new Point(205, 138);
             txt_SLBan.Name = "txt_SLBan";
             txt_SLBan.PlaceholderText = "Nhập SL Bán";
-            txt_SLBan.Size = new Size(193, 31);
+            txt_SLBan.Size = new Size(116, 31);
             txt_SLBan.TabIndex = 17;
             // 
             // lb_SLValue
             // 
             lb_SLValue.AutoSize = true;
-            lb_SLValue.Location = new Point(207, 144);
+            lb_SLValue.Location = new Point(206, 92);
             lb_SLValue.Name = "lb_SLValue";
             lb_SLValue.Size = new Size(24, 25);
             lb_SLValue.TabIndex = 16;
@@ -69,7 +70,7 @@
             // lb_SoLuong
             // 
             lb_SoLuong.AutoSize = true;
-            lb_SoLuong.Location = new Point(207, 119);
+            lb_SoLuong.Location = new Point(206, 54);
             lb_SoLuong.Name = "lb_SoLuong";
             lb_SoLuong.Size = new Size(89, 25);
             lb_SoLuong.TabIndex = 15;
@@ -78,7 +79,7 @@
             // lb_GiaValue
             // 
             lb_GiaValue.AutoSize = true;
-            lb_GiaValue.Location = new Point(207, 81);
+            lb_GiaValue.Location = new Point(86, 197);
             lb_GiaValue.Name = "lb_GiaValue";
             lb_GiaValue.Size = new Size(24, 25);
             lb_GiaValue.TabIndex = 14;
@@ -87,11 +88,11 @@
             // lb_Gia
             // 
             lb_Gia.AutoSize = true;
-            lb_Gia.Location = new Point(207, 56);
+            lb_Gia.Location = new Point(47, 172);
             lb_Gia.Name = "lb_Gia";
-            lb_Gia.Size = new Size(62, 25);
+            lb_Gia.Size = new Size(121, 25);
             lb_Gia.TabIndex = 13;
-            lb_Gia.Text = "Giá SP";
+            lb_Gia.Text = "Giá Sản Phẩm";
             // 
             // lb_Ten
             // 
@@ -110,11 +111,21 @@
             ptb_Img.TabIndex = 11;
             ptb_Img.TabStop = false;
             // 
+            // lb_GiaMoi
+            // 
+            lb_GiaMoi.AutoSize = true;
+            lb_GiaMoi.Location = new Point(75, 222);
+            lb_GiaMoi.Name = "lb_GiaMoi";
+            lb_GiaMoi.Size = new Size(52, 25);
+            lb_GiaMoi.TabIndex = 19;
+            lb_GiaMoi.Text = "1000";
+            // 
             // cpn_banhang
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(328, 244);
+            Controls.Add(lb_GiaMoi);
             Controls.Add(btn_Mua);
             Controls.Add(txt_SLBan);
             Controls.Add(lb_SLValue);
@@ -140,5 +151,6 @@
         private Label lb_Gia;
         private Label lb_Ten;
         private PictureBox ptb_Img;
+        private Label lb_GiaMoi;
     }
 }

@@ -45,7 +45,6 @@ namespace C_PRL.Forms
                 this.Hide();
                 main.ShowDialog();
                 this.Show();
-                txt_taikhoan.Text = "";
                 txt_matkhau.Text = "";
             }
         }

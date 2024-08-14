@@ -27,7 +27,7 @@ namespace C_PRL.Forms
             {
                 Id = Guid.NewGuid(),
                 Name = txt_ten.Text,
-                Description = txt_ten.Text,
+                Description = txt_mota.Text,
                 StartDate = dtp_start.Value,
                 EndDate = dtp_end.Value,
                 Percent = Convert.ToDouble(txt_ptgiam.Text),

@@ -64,10 +64,10 @@
             dtg_Data.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             dtg_Data.BackgroundColor = SystemColors.ActiveCaption;
             dtg_Data.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtg_Data.Location = new Point(6, 95);
+            dtg_Data.Location = new Point(6, 81);
             dtg_Data.Name = "dtg_Data";
             dtg_Data.RowHeadersWidth = 62;
-            dtg_Data.Size = new Size(1333, 255);
+            dtg_Data.Size = new Size(1333, 256);
             dtg_Data.TabIndex = 0;
             dtg_Data.CellContentClick += dtg_Data_CellContentClick;
             // 
@@ -87,7 +87,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F);
             label2.ForeColor = SystemColors.Desktop;
-            label2.Location = new Point(532, 153);
+            label2.Location = new Point(522, 109);
             label2.Name = "label2";
             label2.Size = new Size(163, 32);
             label2.TabIndex = 3;
@@ -99,7 +99,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F);
             label3.ForeColor = SystemColors.Desktop;
-            label3.Location = new Point(69, 233);
+            label3.Location = new Point(56, 191);
             label3.Name = "label3";
             label3.Size = new Size(102, 32);
             label3.TabIndex = 4;
@@ -118,9 +118,9 @@
             groupBox1.Controls.Add(dtg_Data);
             groupBox1.Font = new Font("Segoe UI", 12F);
             groupBox1.ForeColor = SystemColors.Desktop;
-            groupBox1.Location = new Point(12, 371);
+            groupBox1.Location = new Point(12, 316);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(1349, 434);
+            groupBox1.Size = new Size(1349, 431);
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
             groupBox1.Text = " Sản Phẩm";
@@ -129,7 +129,7 @@
             // 
             btn_tim.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btn_tim.ForeColor = SystemColors.ActiveCaptionText;
-            btn_tim.Location = new Point(1207, 40);
+            btn_tim.Location = new Point(1207, 27);
             btn_tim.Name = "btn_tim";
             btn_tim.Size = new Size(132, 48);
             btn_tim.TabIndex = 8;
@@ -141,9 +141,9 @@
             // 
             btn_Show.Anchor = AnchorStyles.Top;
             btn_Show.ForeColor = SystemColors.ActiveCaptionText;
-            btn_Show.Location = new Point(899, 368);
+            btn_Show.Location = new Point(899, 356);
             btn_Show.Name = "btn_Show";
-            btn_Show.Size = new Size(150, 57);
+            btn_Show.Size = new Size(165, 57);
             btn_Show.TabIndex = 6;
             btn_Show.Text = "Hiển Thị DS";
             btn_Show.UseVisualStyleBackColor = true;
@@ -152,9 +152,9 @@
             // 
             btn_Xoa.Anchor = AnchorStyles.Top;
             btn_Xoa.ForeColor = SystemColors.ActiveCaptionText;
-            btn_Xoa.Location = new Point(677, 368);
+            btn_Xoa.Location = new Point(677, 356);
             btn_Xoa.Name = "btn_Xoa";
-            btn_Xoa.Size = new Size(145, 57);
+            btn_Xoa.Size = new Size(160, 57);
             btn_Xoa.TabIndex = 5;
             btn_Xoa.Text = "Xóa";
             btn_Xoa.UseVisualStyleBackColor = true;
@@ -164,9 +164,9 @@
             // 
             btn_Sua.Anchor = AnchorStyles.Top;
             btn_Sua.ForeColor = SystemColors.ActiveCaptionText;
-            btn_Sua.Location = new Point(466, 368);
+            btn_Sua.Location = new Point(466, 356);
             btn_Sua.Name = "btn_Sua";
-            btn_Sua.Size = new Size(145, 57);
+            btn_Sua.Size = new Size(160, 57);
             btn_Sua.TabIndex = 4;
             btn_Sua.Text = "Sửa";
             btn_Sua.UseVisualStyleBackColor = true;
@@ -176,9 +176,9 @@
             // 
             btn_Them.Anchor = AnchorStyles.Top;
             btn_Them.ForeColor = SystemColors.ActiveCaptionText;
-            btn_Them.Location = new Point(254, 368);
+            btn_Them.Location = new Point(254, 356);
             btn_Them.Name = "btn_Them";
-            btn_Them.Size = new Size(145, 57);
+            btn_Them.Size = new Size(160, 57);
             btn_Them.TabIndex = 3;
             btn_Them.Text = "Thêm";
             btn_Them.UseVisualStyleBackColor = true;
@@ -188,7 +188,7 @@
             // 
             label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label4.AutoSize = true;
-            label4.Location = new Point(861, 48);
+            label4.Location = new Point(861, 35);
             label4.Name = "label4";
             label4.Size = new Size(115, 32);
             label4.TabIndex = 2;
@@ -197,7 +197,7 @@
             // txt_timkiem
             // 
             txt_timkiem.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txt_timkiem.Location = new Point(1002, 45);
+            txt_timkiem.Location = new Point(1002, 32);
             txt_timkiem.Name = "txt_timkiem";
             txt_timkiem.Size = new Size(188, 39);
             txt_timkiem.TabIndex = 1;
@@ -207,7 +207,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F);
             label5.ForeColor = SystemColors.Desktop;
-            label5.Location = new Point(69, 73);
+            label5.Location = new Point(56, 29);
             label5.Name = "label5";
             label5.Size = new Size(165, 32);
             label5.TabIndex = 6;
@@ -219,7 +219,7 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 12F);
             label7.ForeColor = SystemColors.Desktop;
-            label7.Location = new Point(532, 233);
+            label7.Location = new Point(522, 189);
             label7.Name = "label7";
             label7.Size = new Size(125, 32);
             label7.TabIndex = 8;
@@ -231,7 +231,7 @@
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 12F);
             label8.ForeColor = SystemColors.Desktop;
-            label8.Location = new Point(532, 73);
+            label8.Location = new Point(522, 29);
             label8.Name = "label8";
             label8.Size = new Size(100, 32);
             label8.TabIndex = 9;
@@ -243,7 +243,7 @@
             groupBox2.Controls.Add(ptb_Image);
             groupBox2.Font = new Font("Segoe UI", 12F);
             groupBox2.ForeColor = SystemColors.Desktop;
-            groupBox2.Location = new Point(1004, 36);
+            groupBox2.Location = new Point(1004, 29);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(330, 261);
             groupBox2.TabIndex = 10;
@@ -253,7 +253,7 @@
             // txt_tensp
             // 
             txt_tensp.Font = new Font("Segoe UI", 12F);
-            txt_tensp.Location = new Point(275, 66);
+            txt_tensp.Location = new Point(266, 29);
             txt_tensp.Name = "txt_tensp";
             txt_tensp.Size = new Size(222, 39);
             txt_tensp.TabIndex = 12;
@@ -262,7 +262,7 @@
             // 
             txt_giaSP.Anchor = AnchorStyles.Top;
             txt_giaSP.Font = new Font("Segoe UI", 12F);
-            txt_giaSP.Location = new Point(710, 66);
+            txt_giaSP.Location = new Point(701, 29);
             txt_giaSP.Name = "txt_giaSP";
             txt_giaSP.Size = new Size(258, 39);
             txt_giaSP.TabIndex = 15;
@@ -270,7 +270,7 @@
             // txt_ncc
             // 
             txt_ncc.Font = new Font("Segoe UI", 12F);
-            txt_ncc.Location = new Point(275, 226);
+            txt_ncc.Location = new Point(266, 189);
             txt_ncc.Name = "txt_ncc";
             txt_ncc.Size = new Size(222, 39);
             txt_ncc.TabIndex = 17;
@@ -279,7 +279,7 @@
             // 
             txt_soluongton.Anchor = AnchorStyles.Top;
             txt_soluongton.Font = new Font("Segoe UI", 12F);
-            txt_soluongton.Location = new Point(710, 146);
+            txt_soluongton.Location = new Point(701, 109);
             txt_soluongton.Name = "txt_soluongton";
             txt_soluongton.Size = new Size(258, 39);
             txt_soluongton.TabIndex = 18;
@@ -289,7 +289,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F);
             label1.ForeColor = SystemColors.Desktop;
-            label1.Location = new Point(69, 153);
+            label1.Location = new Point(56, 109);
             label1.Name = "label1";
             label1.Size = new Size(195, 32);
             label1.TabIndex = 19;
@@ -298,7 +298,7 @@
             // txt_mota
             // 
             txt_mota.Font = new Font("Segoe UI", 12F);
-            txt_mota.Location = new Point(275, 146);
+            txt_mota.Location = new Point(266, 109);
             txt_mota.Name = "txt_mota";
             txt_mota.Size = new Size(222, 39);
             txt_mota.TabIndex = 20;
@@ -309,7 +309,7 @@
             cbx_trangthai.Font = new Font("Segoe UI", 12F);
             cbx_trangthai.FormattingEnabled = true;
             cbx_trangthai.Items.AddRange(new object[] { "Hoạt Động", "Ngừng Kinh Doanh" });
-            cbx_trangthai.Location = new Point(710, 225);
+            cbx_trangthai.Location = new Point(701, 188);
             cbx_trangthai.Name = "cbx_trangthai";
             cbx_trangthai.Size = new Size(260, 40);
             cbx_trangthai.TabIndex = 21;
@@ -320,7 +320,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F);
             label6.ForeColor = SystemColors.Desktop;
-            label6.Location = new Point(532, 310);
+            label6.Location = new Point(522, 258);
             label6.Name = "label6";
             label6.Size = new Size(58, 32);
             label6.TabIndex = 4;
@@ -330,7 +330,7 @@
             // 
             cbx_sale.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cbx_sale.FormattingEnabled = true;
-            cbx_sale.Location = new Point(710, 307);
+            cbx_sale.Location = new Point(701, 258);
             cbx_sale.Name = "cbx_sale";
             cbx_sale.Size = new Size(260, 40);
             cbx_sale.TabIndex = 22;
@@ -340,7 +340,7 @@
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1373, 807);
+            ClientSize = new Size(1373, 753);
             Controls.Add(cbx_sale);
             Controls.Add(cbx_trangthai);
             Controls.Add(txt_mota);

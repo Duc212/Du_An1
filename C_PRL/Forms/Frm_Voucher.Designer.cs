@@ -1,6 +1,6 @@
 ﻿namespace C_PRL.Forms
 {
-    partial class Frm_HoaDon
+    partial class Frm_Voucher
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             SuspendLayout();
             // 
-            // Frm_HoaDon
+            // Frm_Voucher
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1383, 879);
-            Name = "Frm_HoaDon";
-            Text = "Hóa Đơn";
+            ClientSize = new Size(1529, 718);
+            Name = "Frm_Voucher";
+            Text = "Voucher";
             ResumeLayout(false);
         }
 

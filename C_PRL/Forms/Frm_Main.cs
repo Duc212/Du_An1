@@ -108,13 +108,23 @@ namespace C_PRL.Forms
         private void btn_HoaDon_Click(object sender, EventArgs e)
         {
             pn_Show.Controls.Clear();
-            Frm_HoaDon frm_HoaDon = new Frm_HoaDon();
+            Frm_LichSuHoaDon frm_HoaDon = new Frm_LichSuHoaDon();
             frm_HoaDon.TopLevel = false;
             pn_Show.Controls.Add(frm_HoaDon);
             frm_HoaDon.FormBorderStyle = FormBorderStyle.None;
             frm_HoaDon.Dock = DockStyle.Fill;
             lb_title.Text = frm_HoaDon.Text;
             frm_HoaDon.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lb_account_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

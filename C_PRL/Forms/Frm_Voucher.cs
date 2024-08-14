@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace C_PRL.Forms
 {
-    public partial class Frm_HoaDon : Form
+    public partial class Frm_Voucher : Form
     {
-        public Frm_HoaDon()
+        public Frm_Voucher()
         {
             InitializeComponent();
         }

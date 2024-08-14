@@ -36,7 +36,7 @@ namespace C_PRL.Forms
             dtg_Data.Rows.Clear();
             dtg_Data.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             int stt = 1;
-            dtg_Data.ColumnCount = 9;
+            dtg_Data.ColumnCount = 10;
             dtg_Data.Columns[0].Name = "stt"; dtg_Data.Columns[0].HeaderText = "Số Thứ Tự";
             dtg_Data.Columns[1].Name = "ten"; dtg_Data.Columns[1].HeaderText = "Tên Sản Phẩm";
             dtg_Data.Columns[2].Name = "mota"; dtg_Data.Columns[2].HeaderText = "Mô tả sản phẩm";
@@ -48,7 +48,7 @@ namespace C_PRL.Forms
             dtg_Data.Columns[7].Visible = false;
             dtg_Data.Columns[8].Name = "id";
             dtg_Data.Columns[8].Visible = false; // An cot ID
-            //dtg_Data.Columns[9].Name = "sale"; dtg_Data.Columns[6].HeaderText = "Sale";
+            dtg_Data.Columns[9].Name = "sale"; dtg_Data.Columns[6].HeaderText = "SaleID";
 
 
 
@@ -57,7 +57,7 @@ namespace C_PRL.Forms
             foreach (var item in data)
             {
                 dtg_Data.Rows.Add(stt++, item.TenSanPham, item.MoTa, item.NhaCungCap, item.Gia,
-                    item.SoLuongTon, item.TrangThai, item.ImgURL, item.Id/*,item.Sale*/);
+                    item.SoLuongTon, item.TrangThai, item.ImgURL, item.Id, item.SaleId);
             }
 
         }
